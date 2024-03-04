@@ -395,7 +395,7 @@ FROM EMPLOYEE
 WHERE SUBSTR(EMP_NO, 8, 1) = '1'; --15명
 						-- 8번쨰 자리에서 1개 잘라낸게 1이라면
 
-SELECT SUM(DECODE( SUBSTR(EMP_NO, 8, 1),'1',1,0 )) 남성
+SELECT SUM(DECODE( SUBSTR(EMP_NO, 8, 1),'1',1,0 )) 남성사원
 FROM EMPLOYEE;
 
 
