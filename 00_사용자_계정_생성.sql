@@ -10,7 +10,7 @@ ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
 -- CTRL + ENTER : 선택한 SQL 수행
 
 --사용자 계정 생성
-CREATE USER workbook IDENTIFIED BY  workbook;
+CREATE USER workbook IDENTIFIED BY workbook;
 
 -- 사용자 계정에 권한 부여
 GRANT RESOURCE, CONNECT TO  workbook;
