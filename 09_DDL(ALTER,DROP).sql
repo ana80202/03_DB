@@ -207,10 +207,20 @@ SELECT * FROM TB2; --FK 제약이 걸려있는게 아니라 단순히 숫자로�
 --> DDL은 수행 시 존재하고 있는 트랜잭션을 모두 DB에 강제 COMMIT 시킴
 --> DDL이 종료된 후 DML 구문을 수행할 수 있도록 권장!
 
-SELECT * FROM TB2 2;
+SELECT * FROM TB2;
 
+COMMIT;
 
+--DML
+INSERT INTO TB2 VALUES(14,4);
+INSERT INTO TB2 VALUES(15,5);
+SELECT * FROM TB2;  -- DB에 있는거 아님 트랜잭션에 있는거
 
+--컬럼명 변경 DDL
+ALTER TABLE TB2 RENAME COLUMN TB2_COL TO TB2_COLCOL;
+
+ROLLBACK;
+SELECT * FROM TB2;
 
 
 
