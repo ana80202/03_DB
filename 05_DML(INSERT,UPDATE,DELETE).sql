@@ -130,7 +130,7 @@ ROLLBACK;
 
 UPDATE DEPARTMENT2 SET 
 DEPT_ID = 'D0',
-DEPT_TITLE = '전략기획팀'--WHERE절 직전 컬럼 작성할 때 콤마(,) 찍으면 안됨!!ㄴ
+DEPT_TITLE = '전략기획팀'--WHERE절 직전 컬럼 작성할 때 콤마(,) 찍으면 안됨!!
 WHERE DEPT_ID = 'D9'
 AND DEPT_TITLE = '총무부';
 
@@ -237,7 +237,7 @@ COMMIT;
 SELECT * FROM EMPLOYEE2
 WHERE EMP_NAME = '개구리';
 
---EMPLOYEE2 테이블에서 이름이 '장채현'인 사원 정보 삭제
+--EMPLOYEE2 테이블에서 이름이 '개구리'인 사원 정보 삭제
 DELETE FROM EMPLOYEE2
 WHERE EMP_NAME = '개구리';
 
