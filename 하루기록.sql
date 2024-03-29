@@ -1,3 +1,22 @@
+ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
+
+-- 새로운 사용자 계정 생성 (sys 계정으로 진행)
+CREATE USER todayrecord IDENTIFIED BY recordcdy;
+
+-- 사용자 계정 권한 부여 설정
+GRANT RESOURCE, CONNECT TO recordcdy;
+
+-- 객체가 생성될 수 있는 공간 할당량 지정
+ALTER USER recordcdy DEFAULT TABLESPACE SYSTEM QUOTA UNLIMITED ON SYSTEM;
+
+
+
+
+
+
+
+
+
 CREATE TABLE "MEMBER" (
 	"MEMBER_NO"	NUMBER		NOT NULL,
 	"MEMBER_ID"	VARCHAR2(50)		NOT NULL,
@@ -65,7 +84,7 @@ COMMENT ON COLUMN "RECORD"."RECORD_DEL_FL" IS '삭제 여부(N : 삭제X , Y : �
 COMMENT ON COLUMN "RECORD"."RECORD_NO" IS '작성 회원 번호';
 
 -- 시퀀스 생성
-CREATE SEQUENCE SEQ_TODO_NO NOCACHE;
+CREATE SEQUENCE SEQ_RECORD_NO NOCACHE;
 
 ALTER TABLE "RECORD" ADD CONSTRAINT "PK_RECORD" PRIMARY KEY (
 	"RECORD_NO"
@@ -80,14 +99,14 @@ REFERENCES "MEMBER" (
 
 -- 샘플 투두 추가
 INSERT INTO "RECORD"
-VALUES(SEQ_TODO_NO.NEXTVAL, '강아지랑 산책', '가다가 비와서 돌아옴'
+VALUES(SEQ_RECORD_NO.NEXTVAL, '강아지랑 산책', '가다가 비와서 돌아옴'
 	, DEFAULT, DEFAULT, 1);
 
 
 SELECT * FROM "MEMBER";
 SELECT * FROM "RECORD";
 
-
+DELETE FROM "RECORD";
 
 COMMIT;
 
