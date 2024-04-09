@@ -148,10 +148,10 @@
 				"auth-model": "oracle_native"
 			}
 		},
-		"oracle_thin-18e7f082f13-276b02264ae93e63": {
+		"oracle_thin-18e8319ab52-35444e285d9f9eab": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "todayrecord",
+			"name": "recordcdy",
 			"save-password": true,
 			"configuration": {
 				"host": "localhost",
@@ -169,7 +169,7 @@
 				"auth-model": "oracle_native"
 			}
 		},
-		"oracle_thin-18e8319ab52-35444e285d9f9eab": {
+		"oracle_thin-18ec0a6117f-78509eddb9acea41": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
 			"name": "localhost",
